@@ -34,6 +34,10 @@ Klik hier om een live versie te bekijken.
 
 ## Bronnen
 Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:
-https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage
-https://collectie.wereldculturen.nl/
+https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br> 
+https://collectie.wereldculturen.nl/ <br>
+https://guides.emberjs.com/release/ <br>
+http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br> 
+
+
 
