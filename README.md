@@ -3,12 +3,17 @@ Jongen mensen zijn steeds meer geïnteresseerd in tatoeages. Tatoeages vertellen
 Dit beeldmateriaal kan afkomstig zijn van verschillende culturen uit verschillende landen, afhankelijk van de voorkeuren van de gebruiker.
 
 ## Target audience (doelgroep)
-
+Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïnteresseerd zijn in unieke tatoeages van verschillende culturen.
 
 ## Wat haal ik uit mijn database? 
 Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen).
 
 ## Aan de slag met Ember
+Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt.
 
-## Resultaat
+## Resultaat (met link)
+Dit is het resultaat:
 
+
+
+Om een live versie te zien, klik op deze link:
