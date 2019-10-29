@@ -40,6 +40,15 @@ Dit is het resultaat:
 
 [Klik hier om een live versie te bekijken](hier moet de link)
 
+## Mijn leerpunten
+Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd:
+* Mijn kennis over het museum Volkenkunde is vergroot.
+* Ik ken de basiscommando's in de terminal.
+* Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken.
+* Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken.
+* Ik weet nu hoe ik foto's kan zoeken in de collectie het museum m.b.v queries in Sparql.
+* Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
+
 ## Bronnen
 Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:
 https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br> 
@@ -47,5 +56,5 @@ https://collectie.wereldculturen.nl/ <br>
 https://guides.emberjs.com/release/ <br>
 http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br> 
 
-
+## Credits
 
