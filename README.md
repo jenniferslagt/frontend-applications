@@ -8,10 +8,9 @@ Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïntere
 ## Wat haal ik uit mijn database? 
 Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt:
 
-> PREFIX dc: <http://purl.org/dc/elements/1.1/> 
-> PREFIX dct: <http://purl.org/dc/terms/> 
-> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
+> PREFIX dc: <http://purl.org/dc/elements/1.1/> <br>
+> PREFIX dct: <http://purl.org/dc/terms/> <br>
+> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> <br>
 > SELECT ?cho ?title ?type WHERE {
 >   VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
 >   ?cho dc:type ?type ;
