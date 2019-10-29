@@ -11,12 +11,12 @@ Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter 
 > PREFIX dc: <http://purl.org/dc/elements/1.1/> <br>
 > PREFIX dct: <http://purl.org/dc/terms/> <br>
 > PREFIX skos: <http://www.w3.org/2004/02/skos/core#> <br>
-> SELECT ?cho ?title ?type WHERE {
->   VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
->   ?cho dc:type ?type ;
->         dc:title ?title .
->    FILTER langMatches(lang(?title), "ned")
->    FILTER (REGEX (?title, "tatoeage"))
+> SELECT ?cho ?title ?type WHERE { <br>
+>   VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"} <br>
+>   ?cho dc:type ?type ; <br>
+>         dc:title ?title . <br>
+>    FILTER langMatches(lang(?title), "ned") <br>
+>    FILTER (REGEX (?title, "tatoeage")) <br>
 > }
 
 
