@@ -350,7 +350,7 @@
   });
   _exports.default = void 0;
   const url = "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-10/sparql";
-  const query = "\nPREFIX edm: <http://www.europeana.eu/schemas/edm/>\nPREFIX dc: <http://purl.org/dc/elements/1.1/>\nPREFIX dct: <http://purl.org/dc/terms/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nSELECT ?cho ?title ?type\nWHERE {\n VALUES ?type { \"Foto\" \"foto\" \"Negatief\" \"negatief\" \"Glasnegatief\" \"glasnegatief\" \"Dia\" \"dia\" \"Kleurendia\" \"kleurendia\" \"Lichtbeeld\" \"lichtbeeld\"}\n ?cho edm:isRelatedTo <https://hdl.handle.net/20.500.11840/termmaster21439> ;\n      dc:title ?title ;\n      dc:type ?type .\n}\n"; //categorie = "tatoeage"
+  const query = "\nPREFIX edm: <http://www.europeana.eu/schemas/edm/>\nPREFIX dc: <http://purl.org/dc/elements/1.1/>\nPREFIX dct: <http://purl.org/dc/terms/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nSELECT ?cho ?title ?type\nWHERE {\n VALUES ?type { \"Foto\" \"foto\" \"Negatief\" \"negatief\" \"Glasnegatief\" \"glasnegatief\" \"Dia\" \"dia\" \"Kleurendia\" \"kleurendia\" \"Lichtbeeld\" \"lichtbeeld\"}\n ?cho edm:isRelatedTo <https://hdl.handle.net/20.500.11840/termmaster21439> ;\n      dc:title ?title ;\n      dc:type ?type .\n}\nLIMIT 40\n"; //categorie = "tatoeage"
   //students.filter(function(name){ return filterFunctie(name)} )
   //
   //function filterFunctie(naam){
@@ -398,8 +398,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "m2/ILqwt",
-    "block": "{\"symbols\":[],\"statements\":[[0,\" \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"menu\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"route\"],[\"index\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"\\n        \"],[7,\"em\",true],[8],[0,\"Tatoeages\"],[9],[0,\"\\n      \"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[7,\"div\",true],[10,\"class\",\"links\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-about\",\"about\"]],{\"statements\":[[0,\"        Over ons\\n\"]],\"parameters\":[]},null],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-contact\",\"contact\"]],{\"statements\":[[0,\"        Contact\\n\"]],\"parameters\":[]},null],[0,\"    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"body\"],[8],[0,\"\\n    \"],[1,[22,\"outlet\"],false],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n\\n\"]],\"hasEval\":false}",
+    "id": "w8pn+Uqg",
+    "block": "{\"symbols\":[],\"statements\":[[0,\" \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"menu\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"route\"],[\"index\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"\\n        \"],[7,\"em\",true],[8],[0,\"Zoek inspiratie\"],[9],[0,\"\\n      \"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[7,\"div\",true],[10,\"class\",\"links\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-about\",\"about\"]],{\"statements\":[[0,\"        Over ons\\n\"]],\"parameters\":[]},null],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-contact\",\"contact\"]],{\"statements\":[[0,\"        Contact\\n\"]],\"parameters\":[]},null],[0,\"    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"body\"],[8],[0,\"\\n    \"],[1,[22,\"outlet\"],false],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "super-rentals/templates/application.hbs"
     }

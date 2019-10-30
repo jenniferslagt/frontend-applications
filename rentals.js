@@ -13,6 +13,7 @@ WHERE {
       dc:title ?title ;
       dc:type ?type .
 }
+LIMIT 40
 `
 //categorie = "tatoeage"
 //students.filter(function(name){ return filterFunctie(name)} )
@@ -31,4 +32,5 @@ export default Route.extend({
     return json.results.bindings;    // response wordt weergegeven in de console.log (alleen de bindings-map)
     });
     }})
+
 
