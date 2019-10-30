@@ -1,0 +1,21 @@
+<div class="welcome_page">
+  <div class="right tomster"></div>
+  <h3>Op zoek naar inspiratie voor een unieke tatoeage?</h3>
+  <p>Open je blik op tatoeages en bekijk foto's van getatoeëerde mensen van verschillende culturen! </p>
+</div>
+
+<!--
+{{#each this.model as |rentalUnit|}}
+  <RentalListing @rental={{rentalUnit}} />
+{{/each}}
+-->
+
+
+{{#each this.model as |rental|}}
+  <article class="listing">
+    <h3>{{rental.title.value}}</h3>
+    <div class="detail owner">
+      <span>Uri:</span> {{rental.cho.value}}
+    </div>
+  </article>
+  {{/each}}
