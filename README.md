@@ -59,7 +59,7 @@ Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd: <br
 •	Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken. <br>
 •	Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken. <br>
 •	Ik heb geleerd om data te filteren en te selecteren met queries in Sparql. <br>
-•	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
+•	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden. <br>
 * Ik begrijp nu beter wat een framework precies inhoudt. (Zie wiki > logboek > review frameworks)
 
 ### Bronnen
