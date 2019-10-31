@@ -50,6 +50,7 @@ Vervolgens kan je beginnen met het creëeren van de applicatie door mappen aan t
 
 ### Resultaat (met link)
 Dit is het resultaat:
+![Schermafbeelding 2019-11-01 om 00 33 04](https://user-images.githubusercontent.com/45489420/67993080-91c11480-fc3f-11e9-9440-61bc970926b3.png) <br>
 [Klik hier om een live versie te bekijken](https://jenniferslagt.github.io/museum-wereldculturen/rentals)
 
 ### Mijn leerpunten
