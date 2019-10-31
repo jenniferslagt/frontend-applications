@@ -5,10 +5,10 @@ Jongen mensen zijn steeds meer geïnteresseerd in tatoeages. Tatoeages vertellen
 Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïnteresseerd zijn in unieke tatoeages van verschillende culturen.
 
 ### Wat haal ik uit mijn database?
-Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt:
-PREFIX dc: http://purl.org/dc/elements/1.1/ 
-PREFIX dct: http://purl.org/dc/terms/ 
-PREFIX skos: http://www.w3.org/2004/02/skos/core# 
+Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt: <br>
+PREFIX dc: http://purl.org/dc/elements/1.1/ <br>
+PREFIX dct: http://purl.org/dc/terms/ <br>
+PREFIX skos: http://www.w3.org/2004/02/skos/core# <br>
 
 SELECT ?cho ?title ?type WHERE { 
 VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"} 
@@ -40,10 +40,10 @@ Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd:
 •	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
 
 ### Bronnen
-Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage 
-https://collectie.wereldculturen.nl/ 
-https://guides.emberjs.com/release/ 
-http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ 
+Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br>
+https://collectie.wereldculturen.nl/ <br>
+https://guides.emberjs.com/release/ <br>
+http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br>
 
 ### Credits
 
