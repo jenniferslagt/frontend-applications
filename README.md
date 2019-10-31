@@ -6,17 +6,27 @@ Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïntere
 
 ### Wat haal ik uit mijn database?
 Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt: <br>
-> PREFIX dc: http://purl.org/dc/elements/1.1/ <br>
-> PREFIX dct: http://purl.org/dc/terms/ <br>
-> PREFIX skos: http://www.w3.org/2004/02/skos/core# <br>
-
-> SELECT ?cho ?title ?type WHERE { <br>
-> VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" > "Lichtbeeld" "lichtbeeld"} <br>
-> ?cho dc:type ?type ; <br>
-> dc:title ?title . <br>
-FILTER langMatches(lang(?title), "ned") <br>
-FILTER (REGEX (?title, "tatoeage")) <br>
-}
+> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
+> PREFIX dc: <http://purl.org/dc/elements/1.1/> <br>
+> PREFIX dct: <http://purl.org/dc/terms/> <br>
+> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> <br>
+> PREFIX edm: <http://www.europeana.eu/schemas/edm/> <br>
+> PREFIX foaf: <http://xmlns.com/foaf/0.1/> <br>
+> PREFIX dbo: <http://dbpedia.org/ontology/> <br>
+> SELECT ?cho ?title ?type ?placeName (SAMPLE(?description) AS ?description) (SAMPLE(?picture) AS ?picture) WHERE { <br>
+> <https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place . <br>
+> ?place skos:prefLabel ?placeName . <br>
+> VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia">  "Lichtbeeld" "lichtbeeld"} <br>
+> ?cho edm:isRelatedTo <https://hdl.handle.net/20.500.11840/termmaster21439>; <br>
+> dct:spatial ?place; <br>
+> dc:type ?type; <br>
+> dc:title ?title; <br>
+> edm:isShownBy ?picture . <br>
+> OPTIONAL {?cho dc:description ?description} . <br>
+> FILTER langMatches(lang(?title), "ned") <br>
+> } <br>
+> LIMIT 40 <br>
+`
 
 ### Aan de slag met Ember
 Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt. Ember is een open-source JavaScript framework, waar webontwikkelaars webapplicaties kunnen maken met verschillende gebruikersinteracties. Er worden regelmatige verbeterde versies van Ember aangekondigd. <br>
@@ -35,12 +45,12 @@ Dit is het resultaat:
 [Klik hier om een live versie te bekijken](hier moet de link)
 
 ### Mijn leerpunten
-Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd:
-•	Mijn kennis over het museum Volkenkunde is vergroot.
-•	Ik ken de basiscommando's in de terminal.
-•	Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken.
-•	Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken.
-•	Ik weet nu hoe ik foto's kan zoeken in de collectie het museum m.b.v queries in Sparql.
+Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd: <br>
+•	Mijn kennis over het museum Volkenkunde is vergroot. <br>
+•	Ik ken de basiscommando's in de terminal. <br>
+•	Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken. <br>
+•	Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken. <br>
+•	Ik weet nu hoe ik foto's kan zoeken in de collectie het museum m.b.v queries in Sparql. <br>
 •	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
 
 ### Bronnen
