@@ -10,20 +10,23 @@ PREFIX dc: http://purl.org/dc/elements/1.1/ <br>
 PREFIX dct: http://purl.org/dc/terms/ <br>
 PREFIX skos: http://www.w3.org/2004/02/skos/core# <br>
 
-SELECT ?cho ?title ?type WHERE { 
-VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"} 
-?cho dc:type ?type ; 
-dc:title ?title . 
-FILTER langMatches(lang(?title), "ned") 
-FILTER (REGEX (?title, "tatoeage")) 
+SELECT ?cho ?title ?type WHERE { <br>
+VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"} <br>
+?cho dc:type ?type ; <br>
+dc:title ?title . <br>
+FILTER langMatches(lang(?title), "ned") <br>
+FILTER (REGEX (?title, "tatoeage")) <br>
 }
 
 ### Aan de slag met Ember
-Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt. Ember is een open-source JavaScript framework, waar webontwikkelaars webapplicaties kunnen maken met verschillende gebruikersinteracties. Er worden regelmatige verbeterde versies van Ember aangekondigd. 
-Er is op de website een tutorial die je kan volgen om te begrijpen hoe je het via de terminal moet installeren en hoe je werk te werk gaat om uiteindelijk de applicatie te realiseren. Voordat Ember gedownload kan worden, moet je Node.js op je computer hebben. Ember is namelijk gebouwd met JavaScript. Ember is een groot pakket en is te installeren via een simpele command line in de terminal:
-npm install -g ember-cli
+Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt. Ember is een open-source JavaScript framework, waar webontwikkelaars webapplicaties kunnen maken met verschillende gebruikersinteracties. Er worden regelmatige verbeterde versies van Ember aangekondigd. <br>
+
+Er is op de website een tutorial die je kan volgen om te begrijpen hoe je het via de terminal moet installeren en hoe je werk te werk gaat om uiteindelijk de applicatie te realiseren. Voordat Ember gedownload kan worden, moet je Node.js op je computer hebben. Ember is namelijk gebouwd met JavaScript. Ember is een groot pakket en is te installeren via een simpele command line in de terminal: <br>
+
+>> npm install -g ember-cli
 Om te testen of Ember daadwerkelijk is geïnstalleerd, kan je deze commando invoeren die je laatste versie weergeeft:
 ember -v <br>
+
 Vervolgens kan je beginnen met het creëeren van de applicatie door mappen aan te maken en deze te structuren met verschillende CLI's in de terminal die worden weergegeven in de tutorial. Ook kan je op deze manier pagina's met elkaar verbinden (routes), zodat de gebruiker kan navigeren. Tenslotte wordt er in de tutorial gefocust op de inhoud van de pagina's (html, css & javascript). Zo kunnen er componenten gebouwd worden en kunnen er bepaalde functionaliteiten toegevoegd worden.
 
 ### Resultaat (met link)
@@ -40,7 +43,8 @@ Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd:
 •	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
 
 ### Bronnen
-Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br>
+Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:<br>
+https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br>
 https://collectie.wereldculturen.nl/ <br>
 https://guides.emberjs.com/release/ <br>
 http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br>
