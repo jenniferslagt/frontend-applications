@@ -2,7 +2,7 @@
   <div class="menu">
     {{#link-to "index"}}
       <h1>
-        <em>Tatoeages</em>
+        <em>Zoek inspiratie</em>
       </h1>
     {{/link-to}}
     <div class="links">
@@ -13,7 +13,11 @@
         Contact
       {{/link-to}}
     </div>
-  </div>
+      </div>
+      <form id="vinden">
+        <input type="search" name="search" placeholder="Waar ben je naar op zoek?" />
+<!--        <input type="submit" value="vind" id="vindbutton">-->
+    </form>
   <div class="body">
     {{outlet}}
   </div>

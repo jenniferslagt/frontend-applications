@@ -72,15 +72,17 @@ p {
 
 .menu {
   height: 4em;
-  background-color: #677ae4;
-  background-color: #05526A;
-  background-color: black;
+  background: linear-gradient(black 0%, #515151 140%);
 }
 
 .menu h1 {
   padding: 7px 0 0 20px;
   color: white;
   font-size: 1.8em;
+}
+
+.menu h1:hover {
+    color: lightgrey;
 }
 
 .menu h1 em {
@@ -103,7 +105,7 @@ p {
 
 .menu a:hover,
 .menu a.active {
-  opacity: 1;
+  color: lightgrey;
 }
 
 .menu .links {
@@ -114,6 +116,37 @@ p {
   position: relative;
   bottom: 5px;
 }
+
+form#vinden {
+    max-width: 2048px;
+    padding: 0px;
+    margin: 15px;
+}
+
+form input {
+    font-size: 1.5em;
+}
+
+form input:focus {
+    background-color: #FBD731;
+    font-size: 1.5em;
+}
+
+/*
+#vindbutton {
+    background-color: #E57736;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0.313em;
+    border: none;
+    width: 6.250em;
+    text-align: center;
+    padding: 1em;
+    padding-top: 0.35em;
+    margin-left: 1em;
+}
+*/
+
 
 .list-filter input {
   padding: 11px;
@@ -171,11 +204,29 @@ p {
  */
 
 .body {
-  padding: 15px;
+  padding: 0px;
 }
 /**
  * Similar to Jumbotron
  */
+
+.welcome_page {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f3/Haka_performed_during_US_Defense_Secretary%27s_visit_to_New_Zealand_%281%29.jpg);
+    background-size: cover;
+    height: 600px;
+    color: white;
+    padding: 30px;
+}
+
+
+.welcome_page h3 {
+    font-size: 40px;
+}
+
+.welcome_page p {
+    font-size: 20px;
+}
+
 
 .jumbo {
   padding: 50px;
@@ -203,22 +254,27 @@ p {
   right: -20px;
 }
 
+
 /**
  * Individual Listings
  */
 
 .listing {
-  margin-top: 15px;
-  background-color: #f6f6f6;
-  padding: 15px 50px;
-  min-height: 200px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: grid;
+    float: left;
+    margin-top: 15px;
+    background-color: #f6f6f6;
+    padding: 15px 15px;
+    min-height: 200px;
+    max-width: 325px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+        padding-left: 15px;
+
 }
 
 .listing:hover {
-  background-color: #f3f3f3;
+  background-color: lightgrey;
 }
 
 .listing img {

@@ -1,60 +1,57 @@
-## Omschrijving concept 
-Jongen mensen zijn steeds meer geïnteresseerd in tatoeages. Tatoeages vertellen vaak een verhaal of hebben een specifieke betekenis die zich in het verleden heeft afgespeeld: de geschiedenis. Uit de korte desk research blijkt dat tatoeages vroeger als brandmerk dienden voor slaven. Ook was het populair onder de zeelieden. Het museum gaat echter over de geschiedenis van bepaalde dingen. Daarom  wil ik een applicatie maken die beeldmateriaal van tatoeages aanbiedt. Het dient dus als een inspiratiebron voor mensen die een tatoeage willen zetten.
-Dit beeldmateriaal kan afkomstig zijn van verschillende culturen uit verschillende landen, afhankelijk van de voorkeuren van de gebruiker.
+# super-rentals
 
-## Target audience (doelgroep)
-Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïnteresseerd zijn in unieke tatoeages van verschillende culturen.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
-## Wat haal ik uit mijn database? 
-Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt:
+## Prerequisites
 
-> PREFIX dc: <http://purl.org/dc/elements/1.1/> <br>
-> PREFIX dct: <http://purl.org/dc/terms/> <br>
-> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> <br>
-> <br>
-> SELECT ?cho ?title ?type WHERE { <br>
->   VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"} <br>
->   ?cho dc:type ?type ; <br>
->         dc:title ?title . <br>
->    FILTER langMatches(lang(?title), "ned") <br>
->    FILTER (REGEX (?title, "tatoeage")) <br>
-> }
+You will need the following things properly installed on your computer.
 
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with npm)
+* [Ember CLI](https://ember-cli.com/)
+* [Google Chrome](https://google.com/chrome/)
 
-## Aan de slag met Ember
-Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt. Ember is een open-source JavaScript framework, waar webontwikkelaars webapplicaties kunnen maken met verschillende gebruikersinteracties. Er worden regelmatige verbeterde versies van Ember aangekondigd. <br>
-Er is op de website een [tutorial](https://guides.emberjs.com/release/tutorial/) die je kan volgen om te begrijpen hoe je het via de terminal moet installeren en hoe je werk te werk gaat om uiteindelijk de applicatie te realiseren. Voordat Ember gedownload kan worden, moet je Node.js op je computer hebben. Ember is namelijk gebouwd met JavaScript. Ember is een groot pakket en is te installeren via een simpele command line in de terminal:
+## Installation
 
-> npm install -g ember-cli
+* `git clone <repository-url>` this repository
+* `cd super-rentals`
+* `npm install`
 
-Om te testen of Ember daadwerkelijk is geïnstalleerd, kan je deze commando invoeren die je laatste versie weergeeft:
- 
-> ember -v
+## Running / Development
 
-Vervolgens kan je beginnen met het creëeren van de applicatie door mappen aan te maken en deze te structuren met verschillende CLI's in de terminal die worden weergegeven in de tutorial. Ook kan je op deze manier pagina's met elkaar verbinden (routes), zodat de gebruiker kan navigeren. Tenslotte wordt er in de tutorial gefocust op de inhoud van de pagina's (html, css & javascript). Zo kunnen er componenten gebouwd worden en kunnen er bepaalde functionaliteiten toegevoegd worden.
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+### Code Generators
 
-## Resultaat (met link)
-Dit is het resultaat:
+Make use of the many generators for code, try `ember help generate` for more details
 
+### Running Tests
 
-[Klik hier om een live versie te bekijken](hier moet de link)
+* `ember test`
+* `ember test --server`
 
-## Mijn leerpunten
-Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd:
-* Mijn kennis over het museum Volkenkunde is vergroot.
-* Ik ken de basiscommando's in de terminal.
-* Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken.
-* Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken.
-* Ik weet nu hoe ik foto's kan zoeken in de collectie het museum m.b.v queries in Sparql.
-* Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
+### Linting
 
-## Bronnen
-Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:
-https://isgeschiedenis.nl/nieuws/geschiedenis-van-de-tatoeage <br> 
-https://collectie.wereldculturen.nl/ <br>
-https://guides.emberjs.com/release/ <br>
-http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br> 
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
-## Credits
+### Building
 
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+### Deploying
+
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* [ember.js](https://emberjs.com/)
+* [ember-cli](https://ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

@@ -1,8 +1,69 @@
-<div class="jumbo">
+<div class="welcome_page">
   <div class="right tomster"></div>
   <h3>Op zoek naar inspiratie voor een unieke tatoeage?</h3>
   <p>Open je blik op tatoeages en bekijk foto's van getatoeëerde mensen van verschillende culturen! </p>
+
 </div>
 
+<!--
+{{#each this.model as |rentalUnit|}}
+  <RentalListing @rental={{rentalUnit}} />
+{{/each}}
+-->
 
+<section id="filter">
+        <form>
+                    <p>Taalgebruik</p>
+            <select name="genre" class="dropdown">
+        <option value="Actie">Alle</option>
+        <option value="Drama">12+</option>
+        <option value="Komedie">16+</option>
+        <option value="Horror">18+</option>
+    </select>
+        </form>
 
+        <form>
+            <p>Sfeer</p>
+            <select name="sfeer" class="dropdown">
+        <option value="Verward">Verward</option>
+        <option value="Somber">Somber</option>
+        <option value="Vrolijk">Vrolijk</option>
+        <option value="Choatisch">Choatisch</option>
+    </select>
+        </form>
+
+        <form>
+            <p>Aantal woorden</p>
+            <select name="sorteren" class="dropdown">
+             <option value="Drama">6-250</option>
+        <option value="Drama">250-500</option>
+        <option value="Komedie">> 500</option>
+    </select>
+        </form>
+
+        <form>
+            <p>Sorteren op</p>
+            <select name="sorteren" class="dropdown">
+        <option value="Actie">Populair</option>
+        <option value="Drama">A-Z</option>
+        <option value="Komedie">Z-A</option>
+        <option value="Horror">Recent</option>
+    </select>
+        </form>
+
+        <input type="submit" value="Zoeken">
+
+    </section>
+    <!--filteren-->
+
+{{#each this.model as |rental|}}
+  <article class="listing">
+    <h3>{{rental.title.value}}</h3>
+    <div class="detail owner">
+      <span>Uri:</span> {{rental.cho.value}}
+    </div>
+    <div class="detail owner">
+      <span>Foto:</span> {{rental.picture.value}}
+    </div>
+  </article>
+  {{/each}}
