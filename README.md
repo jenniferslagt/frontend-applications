@@ -1,3 +1,6 @@
+### Korte introductie
+In deze "Read.me" wordt duidelijk wat precies mijn concept is, hoe ik te werk ben gegaan (met Ember) en wat ik precies geleerd heb. Wil je een uitgebreide versie zien? Bekijk dan even mijn wiki (logboek, concept en ervaring met Ember).
+
 ### Omschrijving concept
 Jongen mensen zijn steeds meer geïnteresseerd in tatoeages. Tatoeages vertellen vaak een verhaal of hebben een specifieke betekenis die zich in het verleden heeft afgespeeld: de geschiedenis. Uit de korte desk research blijkt dat tatoeages vroeger als brandmerk dienden voor slaven. Ook was het populair onder de zeelieden. Het museum gaat echter over de geschiedenis van bepaalde dingen. Daarom wil ik een applicatie maken die beeldmateriaal van tatoeages aanbiedt. Het dient dus als een inspiratiebron voor mensen die een tatoeage willen zetten. Dit beeldmateriaal kan afkomstig zijn van verschillende culturen uit verschillende landen, afhankelijk van de voorkeuren van de gebruiker. <br>
 In mijn wiki op de pagina "Het concept" staat uitgebreid beschreven hoe ik op dit idee gekomen ben en hoe ik te werk ben gegaan.
@@ -7,6 +10,7 @@ https://github.com/jenniferslagt/frontend-applications.wiki.git
 Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïnteresseerd zijn in unieke tatoeages van verschillende culturen.
 
 ### Wat haal ik uit mijn database?
+Met behulp van Sparql kan ik data ophalen uit de collectie van het museum. Er wordt dan een code geschreven die dat data in principe filtert en selecteert, zodat alleen relevante data wordt weergegeven. <br>
 Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter toegevoegd zodat alleen foto's met de termen "tatoeage" of "tatoeages" worden weergegeven. Het is de bedoeling dat gebruikers deze data kunnen filteren op basis van culturen (of landen). Ik heb de volgende query in Sparql gebruikt: <br>
 > PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 > PREFIX dc: <http://purl.org/dc/elements/1.1/> <br>
@@ -30,6 +34,7 @@ Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter 
 > } <br>
 > LIMIT 40 <br>
 `
+Hieruit komen dus foto's met titels en plaatsnamen die gerelateerd zijn aan tatoeages. Culturen spelen hierbij een grote rol. Dit is dus ook de data die in mijn applicatie verschijnt. 
 
 ### Aan de slag met Ember
 Bij het ontwikkelen van dit concept heb ik het framework Ember gebruikt. Ember is een open-source JavaScript framework, waar webontwikkelaars webapplicaties kunnen maken met verschillende gebruikersinteracties. Er worden regelmatige verbeterde versies van Ember aangekondigd. <br>
@@ -53,8 +58,9 @@ Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd: <br
 •	Ik ken de basiscommando's in de terminal. <br>
 •	Ik heb geleerd om met Ember te werken. Zo blijkt dat frameworks hun eigen codes maken. <br>
 •	Ik heb mijn vaardigheden en kennis van Javascript vergroot door een applicatie te maken. <br>
-•	Ik weet nu hoe ik foto's kan zoeken in de collectie het museum m.b.v queries in Sparql. <br>
+•	Ik heb geleerd om data te filteren en te selecteren met queries in Sparql. <br>
 •	Ik heb geleerd hoe ik optimaal in github te werk kan gaan: zo wist ik weinig over wiki's en issues en kan ik nu beter mijn weg vinden.
+* Ik begrijp nu beter wat een framework precies inhoudt. (Zie wiki > logboek > review frameworks)
 
 ### Bronnen
 Tijdens het proces (van idee bedenken tot een uiteindelijke applicatie) heb ik gebruikgemaakt van de volgende bronnen:<br>
@@ -64,4 +70,4 @@ https://guides.emberjs.com/release/ <br>
 http://demo.netwerkdigitaalerfgoed.nl/stories/nmvw/ <br>
 
 ### Credits
-
+Nick Meijer (voor het helpen oplossen van problemen)
