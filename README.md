@@ -50,7 +50,7 @@ Vervolgens kan je beginnen met het creëeren van de applicatie door mappen aan t
 
 ### Resultaat (met link)
 Dit is het resultaat:
-[Klik hier om een live versie te bekijken](hier moet de link)
+[Klik hier om een live versie te bekijken](https://jenniferslagt.github.io/museum-wereldculturen/rentals)
 
 ### Mijn leerpunten
 Aangezien ik geen blok tech had, heb ik in deze twee weken een hoop geleerd: <br>
