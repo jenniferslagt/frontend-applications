@@ -1,5 +1,7 @@
 ### Omschrijving concept
 Jongen mensen zijn steeds meer geïnteresseerd in tatoeages. Tatoeages vertellen vaak een verhaal of hebben een specifieke betekenis die zich in het verleden heeft afgespeeld: de geschiedenis. Uit de korte desk research blijkt dat tatoeages vroeger als brandmerk dienden voor slaven. Ook was het populair onder de zeelieden. Het museum gaat echter over de geschiedenis van bepaalde dingen. Daarom wil ik een applicatie maken die beeldmateriaal van tatoeages aanbiedt. Het dient dus als een inspiratiebron voor mensen die een tatoeage willen zetten. Dit beeldmateriaal kan afkomstig zijn van verschillende culturen uit verschillende landen, afhankelijk van de voorkeuren van de gebruiker. <br>
+In mijn wiki op de pagina "Het concept" staat uitgebreid beschreven hoe ik op dit idee gekomen ben en hoe ik te werk ben gegaan.
+https://github.com/jenniferslagt/frontend-applications.wiki.git
 
 ### Target audience (doelgroep)
 Het is de bedoeling om een nieuwe (jonge) doelgroep aan te spreken die geïnteresseerd zijn in unieke tatoeages van verschillende culturen.
@@ -13,6 +15,7 @@ Ik heb in Sparql een query gebruikt die foto's zoekt. Hierbij heb ik een filter 
 > PREFIX edm: <http://www.europeana.eu/schemas/edm/> <br>
 > PREFIX foaf: <http://xmlns.com/foaf/0.1/> <br>
 > PREFIX dbo: <http://dbpedia.org/ontology/> <br>
+> <br> 
 > SELECT ?cho ?title ?type ?placeName (SAMPLE(?description) AS ?description) (SAMPLE(?picture) AS ?picture) WHERE { <br>
 > <https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place . <br>
 > ?place skos:prefLabel ?placeName . <br>
