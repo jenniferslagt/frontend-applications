@@ -326,19 +326,7 @@
       this.transitionTo('rentals');
     }
 
-  }); //PREFIX dc: <http://purl.org/dc/elements/1.1/>
-  //PREFIX dct: <http://purl.org/dc/terms/>
-  //PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-  //
-  //SELECT ?cho ?title ?type WHERE {
-  //  VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
-  //  ?cho dc:type ?type ;
-  //        dc:title ?title .
-  //   FILTER langMatches(lang(?title), "ned")
-  //   FILTER (REGEX (?title, "tatoeage"))
-  //
-  //}
-
+  });
 
   _exports.default = _default;
 });
@@ -350,12 +338,7 @@
   });
   _exports.default = void 0;
   const url = "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-10/sparql";
-  const query = "\nPREFIX edm: <http://www.europeana.eu/schemas/edm/>\nPREFIX dc: <http://purl.org/dc/elements/1.1/>\nPREFIX dct: <http://purl.org/dc/terms/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nSELECT ?cho ?title ?type\nWHERE {\n VALUES ?type { \"Foto\" \"foto\" \"Negatief\" \"negatief\" \"Glasnegatief\" \"glasnegatief\" \"Dia\" \"dia\" \"Kleurendia\" \"kleurendia\" \"Lichtbeeld\" \"lichtbeeld\"}\n ?cho edm:isRelatedTo <https://hdl.handle.net/20.500.11840/termmaster21439> ;\n      dc:title ?title ;\n      dc:type ?type ;\n    edm:isShownBy ?picture .\n}\nLIMIT 40\n"; //categorie = "tatoeage"
-  //students.filter(function(name){ return filterFunctie(name)} )
-  //
-  //function filterFunctie(naam){
-  //    return naam.includes(categorie)
-  //}
+  const query = "\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX dc: <http://purl.org/dc/elements/1.1/>\nPREFIX dct: <http://purl.org/dc/terms/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX edm: <http://www.europeana.eu/schemas/edm/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nSELECT ?cho ?title ?type ?placeName (SAMPLE(?description) AS ?description) (SAMPLE(?picture) AS ?picture) WHERE {\n  <https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place .\n  ?place skos:prefLabel ?placeName .\n VALUES ?type { \"Foto\" \"foto\" \"Negatief\" \"negatief\" \"Glasnegatief\" \"glasnegatief\" \"Dia\" \"dia\" \"Kleurendia\" \"kleurendia\" \"Lichtbeeld\" \"lichtbeeld\"}\n ?cho edm:isRelatedTo <https://hdl.handle.net/20.500.11840/termmaster21439>;\n dct:spatial ?place;\ndc:type ?type;\n dc:title ?title;\n edm:isShownBy ?picture .\n OPTIONAL {?cho dc:description ?description} .\n FILTER langMatches(lang(?title), \"ned\")\n}\nLIMIT 40\n";
 
   var _default = Ember.Route.extend({
     model() {
@@ -380,8 +363,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "Bk1RRUku",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"jumbo\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"right tomster\"],[8],[9],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Een museum over mensen\"],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"\\n    Museum Volkenkunde staat, als een van de oudste volkenkundige musea ter wereld, midden in de actualiteit.\\n    Een wandeling door het museum opent je blik op de wereld.\\n  \"],[9],[0,\"\\n\\n  \"],[7,\"p\",true],[8],[0,\"Zo zijn er veel verschillende culturen waarbij tatoeages een belangrijke rol speelden: het diende als een brandmerk onder slaven en was het erg populair onder zeelieden.\\n  Tegenwoordig zijn tatoeages nog steeds erg populair als lichaamsversiering.\\n  \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "Bo21J7LP",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"about\"],[8],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Een museum over mensen\"],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"Museum Volkenkunde staat, als een van de oudste volkenkundige musea ter wereld, midden in de actualiteit. Een wandeling door het museum opent je blik op de wereld.\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\"Zo zijn er veel verschillende culturen waarbij tatoeages een belangrijke rol speelden: het diende als een brandmerk onder slaven en was het erg populair onder zeelieden. Tegenwoordig zijn tatoeages nog steeds erg populair als lichaamsversiering.\\n    \"],[9],[0,\"\\n    \"],[7,\"img\",true],[10,\"src\",\"https://www.volkenkunde.nl/sites/default/files/styles/teaser_/public/volkenkunde%20geschiedenis_0.jpg?h=57bc7b4f&itok=zI-4HoBj\"],[10,\"alt\",\"Museum Volkenkunde\"],[8],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "super-rentals/templates/about.hbs"
     }
@@ -398,8 +381,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "w8pn+Uqg",
-    "block": "{\"symbols\":[],\"statements\":[[0,\" \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"menu\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"route\"],[\"index\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"\\n        \"],[7,\"em\",true],[8],[0,\"Zoek inspiratie\"],[9],[0,\"\\n      \"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[7,\"div\",true],[10,\"class\",\"links\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-about\",\"about\"]],{\"statements\":[[0,\"        Over ons\\n\"]],\"parameters\":[]},null],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-contact\",\"contact\"]],{\"statements\":[[0,\"        Contact\\n\"]],\"parameters\":[]},null],[0,\"    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"body\"],[8],[0,\"\\n    \"],[1,[22,\"outlet\"],false],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n\\n\"]],\"hasEval\":false}",
+    "id": "0VhHPC3R",
+    "block": "{\"symbols\":[],\"statements\":[[0,\" \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"menu\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"route\"],[\"index\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"\\n        \"],[7,\"em\",true],[8],[0,\"Zoek inspiratie\"],[9],[0,\"\\n      \"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[7,\"div\",true],[10,\"class\",\"links\"],[8],[0,\"\\n\"],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-about\",\"about\"]],{\"statements\":[[0,\"        Over ons\\n\"]],\"parameters\":[]},null],[4,\"link-to\",null,[[\"class\",\"route\"],[\"menu-contact\",\"contact\"]],{\"statements\":[[0,\"        Contact\\n\"]],\"parameters\":[]},null],[0,\"    \"],[9],[0,\"\\n      \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"body\"],[8],[0,\"\\n    \"],[1,[22,\"outlet\"],false],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "super-rentals/templates/application.hbs"
     }
@@ -434,8 +417,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "2DkYqsp/",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"jumbo\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"right tomster\"],[8],[9],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Adres\"],[9],[0,\"\\n  \"],[7,\"address\",true],[8],[0,\"\\n    Museum Volkenkunde\\n    \"],[7,\"p\",true],[8],[0,\"\\n    Steenstraat 1\\n    2312 BS Leiden\\n    \"],[9],[0,\"\\n\"],[2,\"    <a href=\\\"mailto:superrentalsrep@emberjs.com\\\">superrentalsrep@emberjs.com</a>\"],[0,\"\\n  \"],[9],[0,\"\\n    \"],[7,\"h3\",true],[8],[0,\"Openingstijden\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\"Het museum is van dinsdag t/m zondag open tussen 10.00 - 17.00 uur\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\" Gesloten op maandagen, 1 januari (nieuwjaarsdag), 27 april (Koningsdag), 3 oktober (Leids ontzet) en 25 december (1e kerstdag).\"],[9],[0,\"\\n    \"],[7,\"h3\",true],[8],[0,\"Entreeprijzen\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\"Volwassene (vanaf 19 jaar) - €15,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Jeugd (4 t/m 18 jaar) - € 6,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Kinderen (t/m 3 jaar) - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    CJP* - € 9,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Groepstarief (vanaf 10 volbetalende personen) - 10% korting \"],[7,\"br\",true],[8],[9],[0,\"\\n    Studenten* - € 10,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Museumkaart* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    Bankgiro Loterij VIP-KAART* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    ICOM, Vereniging Rembrandt* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    Vrienden Tropenmuseum, Afrika Museum, Museum Volkenkunde* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\" \"],[7,\"i\",true],[8],[0,\"* Korting of gratis entree alleen op vertoon van de desbetreffende kortingskaart. Deze kaart moet fysiek getoond worden. Digitale varianten worden niet geaccepteerd.\"],[9],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "FrIm4FvW",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"contact\"],[8],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Adres\"],[9],[0,\"\\n  \"],[7,\"address\",true],[8],[0,\"\\n    Museum Volkenkunde\\n    \"],[7,\"p\",true],[8],[0,\"\\n    Steenstraat 1\\n    2312 BS Leiden\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n    \"],[7,\"h3\",true],[8],[0,\"Openingstijden\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\"Het museum is van dinsdag t/m zondag open tussen 10.00 - 17.00 uur\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\" Gesloten op maandagen, 1 januari (nieuwjaarsdag), 27 april (Koningsdag), 3 oktober (Leids ontzet) en 25 december (1e kerstdag).\"],[9],[0,\"\\n    \"],[7,\"h3\",true],[8],[0,\"Entreeprijzen\"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\"Volwassene (vanaf 19 jaar) - €15,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Jeugd (4 t/m 18 jaar) - € 6,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Kinderen (t/m 3 jaar) - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    CJP* - € 9,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Groepstarief (vanaf 10 volbetalende personen) - 10% korting \"],[7,\"br\",true],[8],[9],[0,\"\\n    Studenten* - € 10,00 \"],[7,\"br\",true],[8],[9],[0,\"\\n    Museumkaart* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    Bankgiro Loterij VIP-KAART* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    ICOM, Vereniging Rembrandt* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    Vrienden Tropenmuseum, Afrika Museum, Museum Volkenkunde* - Gratis \"],[7,\"br\",true],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"p\",true],[8],[0,\" \"],[7,\"i\",true],[8],[0,\"* Korting of gratis entree alleen op vertoon van de desbetreffende kortingskaart. Deze kaart moet fysiek getoond worden. Digitale varianten worden niet geaccepteerd.\"],[9],[9],[0,\"\\n    \"],[9],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "super-rentals/templates/contact.hbs"
     }
@@ -470,8 +453,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "R6TEIxmh",
-    "block": "{\"symbols\":[\"rental\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"welcome_page\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"right tomster\"],[8],[9],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Op zoek naar inspiratie voor een unieke tatoeage?\"],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"Open je blik op tatoeages en bekijk foto's van getatoeëerde mensen van verschillende culturen! \"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n\"],[2,\"\\n{{#each this.model as |rentalUnit|}}\\n  <RentalListing @rental={{rentalUnit}} />\\n{{/each}}\"],[0,\"\\n\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"article\",true],[10,\"class\",\"listing\"],[8],[0,\"\\n    \"],[7,\"h3\",true],[8],[1,[23,1,[\"title\",\"value\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"detail owner\"],[8],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Uri:\"],[9],[0,\" \"],[1,[23,1,[\"cho\",\"value\"]],false],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
+    "id": "o/Owg64W",
+    "block": "{\"symbols\":[\"rental\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"welcome_page\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"right tomster\"],[8],[9],[0,\"\\n  \"],[7,\"h3\",true],[8],[0,\"Op zoek naar inspiratie voor een unieke tatoeage?\"],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"Open je blik op tatoeages en bekijk foto's van getatoeëerde mensen van verschillende culturen! \"],[9],[0,\"\\n\\n\"],[7,\"section\",true],[10,\"id\",\"filter\"],[8],[0,\"\\n\"],[7,\"form\",true],[8],[0,\"\\n    \"],[7,\"p\",true],[8],[7,\"b\",true],[8],[0,\" Filter op verschillende plaatsen\"],[9],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"name\",\"places\"],[10,\"value\",\"place1\"],[10,\"id\",\"place1\"],[10,\"type\",\"checkbox\"],[8],[9],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"place1\"],[8],[0,\"Apo Kayan(plateau)\"],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"name\",\"places\"],[10,\"value\",\"place2\"],[10,\"id\",\"place2\"],[10,\"type\",\"checkbox\"],[8],[9],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"place2\"],[8],[0,\"Mendalam (rivier)\"],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"name\",\"places\"],[10,\"value\",\"place3\"],[10,\"id\",\"place3\"],[10,\"type\",\"checkbox\"],[8],[9],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"place3\"],[8],[0,\"Mahakam (rivier)\"],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"name\",\"places\"],[10,\"value\",\"place4\"],[10,\"id\",\"place4\"],[10,\"type\",\"checkbox\"],[8],[9],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"place3\"],[8],[0,\"Zuid-Papua\"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n        \"],[7,\"input\",true],[10,\"value\",\"Zoeken\"],[10,\"id\",\"search_button\"],[10,\"type\",\"submit\"],[8],[9],[0,\"\\n\"],[9],[9],[0,\"\\n\\n\"],[2,\"-----Zoeken door de resultaten------->\\n<form id=\\\"vinden\\\">\\n    <input type=\\\"search\\\" name=\\\"search\\\" placeholder=\\\"Wát voor een tatoeage zoek jij?\\\" />\\n</form>\\n\\n<!--Deze code heeft Ember aangemaakt (tutorial)\"],[0,\"\\n\"],[2,\"\\n{{#each this.model as |rentalUnit|}}\\n  <RentalListing @rental={{rentalUnit}} />\\n{{/each}}\"],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[2,\" er worden bepaalde items gerendert uit rental (value) \"],[0,\"\\n  \"],[7,\"article\",true],[10,\"class\",\"listing\"],[8],[0,\"\\n   \"],[7,\"img\",true],[11,\"src\",[23,1,[\"picture\",\"value\"]]],[10,\"alt\",\"\"],[8],[9],[0,\"\\n   \"],[7,\"br\",true],[8],[9],[0,\"\\n    \"],[7,\"h3\",true],[8],[1,[23,1,[\"title\",\"value\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"detail owner\"],[8],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Plaatsnaam:\"],[9],[0,\" \"],[1,[23,1,[\"placeName\",\"value\"]],false],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
     "meta": {
       "moduleName": "super-rentals/templates/rentals.hbs"
     }
@@ -502,7 +485,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0"});
+            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0+7a20f385"});
           }
         
 //# sourceMappingURL=super-rentals.map
